@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# 🐉 CineSpoilerS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce básico de tickets construido con **React**, que consume la [Dragon Ball API](https://dragonball-api.com) para listar personajes y mostrar su detalle. Base escalable, sin sobreingeniería.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-4-06B6D4?logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?logo=shadcnui&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Stack
 
-## React Compiler
+- **React + Vite + TypeScript** — base del proyecto
+- **Tailwind v4 + shadcn/ui** — UI oscura y minimalista
+- **React Router v7** — navegación (lista / detalle)
+- **Axios** — cliente HTTP centralizado
+- **TanStack Query** — cache, loading y error de datos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🖼️ Evidencias
 
-## Expanding the ESLint configuration
+| Paso 1 | Paso 2 |
+|--------|--------|
+| ![Paso 1](./docs/paso%201.png) | ![Paso 2](./docs/paso%202.png) |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Paso 3 | Paso 4 |
+|--------|--------|
+| ![Paso 3](./docs/paso%203.png) | ![Paso 4](./docs/paso%204.png) |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📁 Estructura
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+\`\`\`
+src/
+├── components/ui/        # componentes de shadcn
+├── features/characters/  # dominio de personajes
+│   ├── components/        # CharacterCard, CharacterCardSkeleton
+│   ├── hooks/             # useCharacters, useCharacter
+│   ├── api.ts             # llamadas a la API
+│   └── types.ts           # tipos
+├── lib/api.ts            # instancia de Axios
+└── pages/               # CharactersPage, CharacterDetailPage
+\`\`\`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Cómo correr
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+\`\`\`bash
+npm install
+npm run dev
+\`\`\`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Abre http://localhost:5173
