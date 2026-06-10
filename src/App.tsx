@@ -1,10 +1,13 @@
-import { Button } from '@/components/ui/button'
+import { Routes, Route } from 'react-router'
+import CharactersPage from '@/pages/CharactersPage'
+import CharacterDetailPage from '@/pages/CharacterDetailPage'
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <Button>Dragon Ball</Button>
-    </div>
+    <Routes>
+      <Route path="/" element={<CharactersPage />} />
+      <Route path="/characters/:id" element={<CharacterDetailPage />} />
+    </Routes>
   )
 }
 
