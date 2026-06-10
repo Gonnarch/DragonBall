@@ -8,7 +8,7 @@ function CharactersPage() {
   return (
     <div className="min-h-screen px-6 py-10">
       <header className="mx-auto mb-10 max-w-6xl">
-        <h1 className="text-4xl font-bold tracking-tight">🐉 CineSpoilerS</h1>
+        <h1 className="text-4xl font-bold tracking-tight">🐉 Dragon Ball</h1>
         <p className="mt-2 text-zinc-400">Personajes de Dragon Ball</p>
       </header>
 

@@ -26,6 +26,10 @@ E-commerce básico de tickets construido con **React**, que consume la [Dragon B
 |--------|--------|
 | ![Paso 3](./docs/paso3.png) | ![Paso 4](./docs/paso4.png) |
 
+| Paso 5 | Paso 6 |
+|--------|--------|
+| ![Paso 5](./docs/paso%205.png) | ![Paso 6](./docs/paso6.png) |
+
 ## 📁 Estructura
 
 \`\`\`
